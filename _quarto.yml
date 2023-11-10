@@ -1,19 +1,22 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "jh277.github.io"
+  title: "Jiaxin (Jessi) Huang"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - example_analysis.qmd
 
 format:
   html:
-    theme: cosmo
+    theme: minty
     css: styles.css
     toc: true
+    page-layout: full
 
 editor: visual
 
