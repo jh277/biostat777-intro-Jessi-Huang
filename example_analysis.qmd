@@ -8,7 +8,9 @@ bibliography: References.bib
 
 ## Research Question
 
-![](images/rainfall_temp.jpeg)[@newsarticle]
+![](images/rainfall_temp.jpeg)
+
+[@newsarticle]
 
 Numerous studies have shown that modern agriculture brings great damage to our ecosystem through accelerating climate change, which result in higher temperature increases and less rainfall.[@farmingresult]
 
@@ -28,16 +30,15 @@ Any environmental specialists who are interested in exploring the relationship b
 
 ### Load original data
 
-The two datasets I will be using comes from [TidyTuesday](https://www.tidytuesday.com). Specifically, I will use the following data from January 2020.
+The two datasets I will be using come from [TidyTuesday](https://www.tidytuesday.com). Specifically, I will use the following data from January 2020.
 
 ```{r message=FALSE}
 #| echo: false
 library(tidyverse)
 library(tidytuesdayR)
 library(here)
-tuesdata <- tidytuesdayR::tt_load("2020-01-07")
-rainfall <- tuesdata$rainfall
-temperature <- tuesdata$temperature
+rainfall <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-07/rainfall.csv')
+temperature <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-07/temperature.csv')
 ```
 
 ### Data dictionary
@@ -147,6 +148,7 @@ rainfall_histogram <- function(input_city, input_year){
 
 ```{r example}
 #| column: margin
+# Example: distribution of rainfall in Perth in 2014
 rainfall_histogram("PERTH", 2014)
 ```
 
