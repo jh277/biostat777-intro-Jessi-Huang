@@ -24,7 +24,7 @@ The goal of this example analysis is to further explore the relationship between
 
 ## Target audience
 
-Any environmental specialists who are interested in exploring the relationship between temperature and rainfall, and use the relationship to predict possible health impact on the population.
+Any environmental specialists who are interested in exploring the relationship between temperature and rainfall, and use the relationship to predict possible health impacts on the population.
 
 ## Methods
 
